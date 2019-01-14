@@ -38,19 +38,19 @@ module.exports = {
           }
         }]
       },
-      // {
-      //   test: /\.(jpg|png|gif|svg)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'materials/',
-      //         publicPath: (url) => './materials/' + url
-      //       }
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.(jpg|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'materials/',
+              publicPath: (url) => './materials/' + url
+            }
+          }
+        ]
+      },
       // {
       //   test: /\.(eot|ttf|woff|woff2)$/,
       //   use: {

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader/root';
 
+import * as homeImage from '../images/home.svg';
+
 import Test from './components/Test';
 
 interface IProps {}
@@ -18,6 +20,7 @@ class App extends React.Component<IProps, IState> {
   render() {
     return (
       <div>
+        <img src={homeImage} />
         Hello, World!
         <Test
           text='hey!'
