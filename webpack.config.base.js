@@ -1,4 +1,5 @@
 const path = require('path');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -78,9 +79,9 @@ module.exports = {
       hash: true,
       inject: true
     }),
-    // new StyleLintPlugin({
-    //   configFile: path.resolve(__dirname, '.stylelintrc.yml'),
-    //   files: ['**/*.scss', '**/*.vue']
-    // })
+    new StyleLintPlugin({
+      configFile: path.resolve(__dirname, '.stylelintrc.yml'),
+      files: ['**/*.scss']
+    })
   ]
 };
