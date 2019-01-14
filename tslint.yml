@@ -1,0 +1,14 @@
+defaultSeverity: "error"
+extends:
+  - "tslint:recommended"
+rules:
+  # シングルクォートにする
+  quotemark: [true, "single"]
+  # 空のインターフェースを許可する
+  no-empty-interface: false
+  # public, protected, privateの修飾子はチェックしない
+  member-access: false
+  # 最後に,をつけることはどちらでもいい
+  trailing-comma: false
+  # importの順番をアルファベット順にすることを無効にするのは様子見
+  # ordered-imports: false

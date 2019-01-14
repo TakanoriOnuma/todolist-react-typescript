@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-interface Props {
-  text: String
+interface IProps {
+  text: string;
 }
-interface State {
-}
-export default class Test extends React.Component<Props, State> {
+interface IState {}
+export default class Test extends React.Component<IProps, IState> {
   render() {
     return (
       <div>Component!{this.props.text}</div>

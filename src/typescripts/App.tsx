@@ -1,15 +1,14 @@
-import { hot } from 'react-hot-loader/root';
 import * as React from 'react';
+import { hot } from 'react-hot-loader/root';
 
 import Test from './components/Test';
 
-interface Props {
+interface IProps {}
+interface IState {
+  name: string;
 }
-interface State {
-  name: String
-}
-class App extends React.Component<Props, State> {
-  constructor(props: Props) {
+class App extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       name: 'test'
@@ -21,7 +20,7 @@ class App extends React.Component<Props, State> {
       <div>
         Hello, World!
         <Test
-          text="hey!"
+          text='hey!'
         />
       </div>
     );

@@ -17,8 +17,15 @@ module.exports = {
       //   exclude: /node_modules/
       // },
       {
+        enforce: 'pre',
+        test: /\.(tsx)$/,
+        loader: 'tslint-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'awesome-typescript-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.pug$/,
